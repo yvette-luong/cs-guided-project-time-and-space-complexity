@@ -5,7 +5,7 @@ Given a non-empty array of integers `nums`, every element appears twice except e
 
 Examples:
 
-- single_number([3,3,2]) -> 1
+- single_number([3,3,2]) -> 2
 - single_number([5,2,3,2,3]) -> 5
 - single_number([10]) -> 10
 """
