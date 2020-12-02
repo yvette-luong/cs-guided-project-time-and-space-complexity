@@ -16,3 +16,42 @@ Notes:
 def two_sum(nums, target):
     # Your code here
 
+    d = {}
+  # O(n + n) == O(2 * n) ~ O(n)
+
+  # populate our dictionary with the key value pairs 
+    for index, num in enumerate(nums): # O(n)
+        d[num] = index # O(1)
+
+# loop over all of the nums again 
+    for index, num in enumerate(nums): # O(n)
+        diff = target - num # O(1)
+        # if diff in l: # O(n)
+        if diff in d: # O(1)
+            if diff == num:
+                return [index, d[diff]]
+                # ​
+    return [-1, -1]
+print(two_sum([2,5,9,13], 18))
+# ​
+# def two_sum(nums, target):
+#     # Your code here
+#     # using nested for loops, we can iterate 
+#     # over the nums
+#         # iterate over all the other nums 
+#         # if the two numbers sum up to our target
+#         # return their indices 
+# ​
+#     # O(n * n) == O(n^2)
+#     for i in range(len(nums)): # O(n)
+#         for j in range(len(nums)): # O(n)
+#             # add a check to make sure the indices are different 
+#             if i == j: # O(1)
+#                 continue 
+#             # O(1) + O(1) == O(2) ~ O(1)
+#             if nums[i] + nums[j] == target:
+#                 return [i, j]
+# ​
+#     # we'll only get outside this for loop if we don't find an answer 
+#     return [-1, -1] 
+
