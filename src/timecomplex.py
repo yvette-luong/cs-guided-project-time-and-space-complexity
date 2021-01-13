@@ -39,7 +39,7 @@ def foo(a):
         print(elem)
 
 foo([1,2,3,4])
-foo([1,2,3,4])
+foo([1,2,3,4,5,6,7,8])
 
 def bar(a):
     print(a[0])     # O(1) over the length of a, "Constant Time"
@@ -59,6 +59,10 @@ def qux(n):
     for i in range(n // 2):     #   O(n/2) == O(1/2 * n) == O(n)
         print(i) 
 
+
+"""
+Login
+"""
 def search(name, lst):
     for elem in lst: # O(n) over the length of lst
         if name == elem: # O(m) over the length of the compared strings 
